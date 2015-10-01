@@ -15,8 +15,7 @@ public class HazeConfiguration {
         return new WebMvcConfigurerAdapter() {
             @Override
             public void addViewControllers(ViewControllerRegistry registry) {
-            	registry.addViewController("/").setViewName("app/login.html");
-            	//registry.addViewController("/").setViewName("login.html");
+            	registry.addViewController("/").setViewName("login.html");
             }
         };
     }	
