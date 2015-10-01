@@ -56,6 +56,10 @@ public class Employee {
 	public void setManagerEmail(String managerEmail) {
 		this.managerEmail = managerEmail;
 	}
+	
+	public boolean isManager() {
+		return isManager;
+	}
 
 	public void setManager(boolean isManager) {
 		this.isManager = isManager;
