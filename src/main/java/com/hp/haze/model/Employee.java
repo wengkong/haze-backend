@@ -12,6 +12,7 @@ public class Employee {
 	private Long employeeId;
 	private String email;	
 	private String fullName;
+	private boolean isManager;
 
 	public Employee() {
 
@@ -49,4 +50,13 @@ public class Employee {
 	public void setFullName(String fullName) {
 		this.fullName = fullName;
 	}
+
+	public boolean isManager() {
+		return isManager;
+	}
+
+	public void setManager(boolean isManager) {
+		this.isManager = isManager;
+	}
+
 }
