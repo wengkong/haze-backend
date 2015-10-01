@@ -57,10 +57,6 @@ public class Employee {
 		this.managerEmail = managerEmail;
 	}
 	
-	public boolean isManager() {
-		return isManager;
-	}
-
 	public void setManager(boolean isManager) {
 		this.isManager = isManager;
 	}
