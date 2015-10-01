@@ -6,33 +6,31 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="employees")
+@Table(name = "employees")
 public class Employee {
-	
-	private Long employeeId;
-	private String email;	
+
+	private String email;
 	private String fullName;
+	private String managerEmail;
+	private boolean isManager;
 
 	public Employee() {
 
 	}
 
-	public Employee(Long id, String email, String fullName) {
+	public Employee(String email, String fullName) {
 		this.email = email;
 		this.fullName = fullName;
 	}
 
+	public Employee(String email, String fullName, String managerEmail) {
+		this.email = email;
+		this.fullName = fullName;
+		this.managerEmail = managerEmail;
+	}
+
 	@Id
-	@Column(name="employee_id", nullable=false)
-	public Long getEmployeeId() {
-		return employeeId;
-	}
-
-	public void setEmployeeId(Long employeeId) {
-		this.employeeId = employeeId;
-	}
-
-	@Column(name="email", nullable=false, length=100)
+	@Column(name = "email", nullable = false, length = 100)
 	public String getEmail() {
 		return email;
 	}
@@ -41,12 +39,25 @@ public class Employee {
 		this.email = email;
 	}
 
-	@Column(name="full_name", nullable=false, length=255)
+	@Column(name = "full_name", nullable = false, length = 255)
 	public String getFullName() {
 		return fullName;
 	}
 
 	public void setFullName(String fullName) {
 		this.fullName = fullName;
+	}
+
+	@Column(name = "manager_email", nullable = true, length = 100)
+	public String getManagerEmail() {
+		return managerEmail;
+	}
+
+	public void setManagerEmail(String managerEmail) {
+		this.managerEmail = managerEmail;
+	}
+
+	public void setManager(boolean isManager) {
+		this.isManager = isManager;
 	}
 }
