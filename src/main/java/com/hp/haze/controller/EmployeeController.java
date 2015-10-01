@@ -45,4 +45,9 @@ public class EmployeeController {
 		log.info("Find by full name " + fullName);
 		return employeeRepository.findByFullName(fullName);
 	}
+	
+	@RequestMapping(method = RequestMethod.POST, params = { "email" })
+	public void login() {
+		
+	}
 }
