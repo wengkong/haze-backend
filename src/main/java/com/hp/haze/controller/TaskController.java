@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.hp.haze.model.Task;
 import com.hp.haze.repository.TaskRepository;
-import com.hp.haze.service.TaskService;
 
 @Controller
 public class TaskController {
